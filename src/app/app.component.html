@@ -1,0 +1,36 @@
+<!--
+<h1 class="center-align">Struktur der Vorlesung </h1> 
+  
+<div class="container">
+  <div class="rw">
+    <div *ngFor="let kapitel of kapitelList" class="col m4 s6">
+      <div class="card vertl">
+        <div class="card-image">
+          <img class="responsive-img" [src]="kapitel.bild"/>
+        </div> 
+        <div class="card-stacked">
+          <div class="card.content">
+             <p>{{ kapitel.name}}</p>
+             <p><small>{{kapitel.anzahl_Seite}}</small></p>
+          </div>
+        </div>
+      </div>
+    
+    
+  </div>    
+</div>
+</div>  
+-->
+  <div class="card horizontal">
+    <div class="card-image">
+      <div *ngFor="let kapitel of kapitelList" class="col s2">
+        <img [src]="kapitel.bild"  class=" width: 2px;  height:10px;"/>
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>I am a very simple card. I am good at containing small bits of information.</p>
+      </div>
+      
+    </div>
+  </div>
+  

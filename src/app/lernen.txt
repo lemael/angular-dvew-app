@@ -1,0 +1,41 @@
+
+<h1>
+    Struktur der Vorlesung 
+  </h1> 
+ <!-- in diese Fall verwenden wir  case: (event.target as HTMLInputElement).value
+ 
+   <input 
+       type="number"
+        (click)="selectKapitel($event)"
+       />
+ -->
+ <!---<p (click)="selectKapitel(kapitelList[0])"> {{kapitelList[0].name}}</p> -->
+ <!-- Ausgeben alles was von User eigegeben wurde-->
+  <!-- 
+   <input
+       #input
+       (keyup)="1"
+       type="text"
+       />
+       <p> {{input.value }}</p>   
+       -->
+       <input
+       #input
+       (keyup.enter)="selectKapitel(input.value)"
+       type="number"
+       />
+       <!--<p>{{kapitelSelected?.name}} ?: zeige kein Fehler obwohl es nicht funktioniert -->
+       <!-- Zu steuern die Darstellung einer template zb: <p> --> 
+        <p *ngIf="kapitelSelected">
+          Sie haben den Kapitel {{kapitelSelected.name}} ausgewählt 
+        </p>
+        <p *ngIf="!kapitelSelected">
+          Kein Kapitel wird gefunden 
+        </p>
+  <p *ngFor="let kapitel of kapitelList">
+     {{ kapitel.name}}  
+  </p>
+
+
+
+ 
